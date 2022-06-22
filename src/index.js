@@ -65,7 +65,7 @@ randomize.addEventListener("click", () => {
 });
 
 // RATING IMPLEMENTATION
-let ratDisplay = document.querySelector(".rating");
+let ratingDisplay = document.querySelector(".rating");
 let stars = document.querySelectorAll(".fa-star-o");
 let totalStar = 0;
 
@@ -100,8 +100,15 @@ function onMouseLeave(e) {
 }
 
 function onClick(e) {
+  const reactionEmojis = [
+    `<i class="fa fa-ban" aria-hidden="true"></i>`,
+    `<i class="fa fa-frown-o"aria-hidden="true"></i>`,
+    `<i class="fa fa-meh-o" aria-hidden="true"></i>`,
+    `<i class="fa fa-smile-o" aria-hidden="true"></i>`,
+    `<i class="fa fa-fire" aria-hidden="true"></i>`,
+  ];
   const ratingVal = e.target.dataset.rating;
   totalStar = ratingVal;
   fill(totalStar);
-  ratDisplay.innerHTML = ratingVal;
+  ratingDisplay.innerHTML = reactionEmojis[ratingVal - 1];
 }

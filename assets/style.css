@@ -154,7 +154,7 @@ li {
 }
 .content {
   font-family: "Monoton", cursive;
-  font-size: 44px;
+  font-size: 48px;
 }
 .subheader {
   font-family: "Raleway Dots", cursive;
@@ -193,6 +193,7 @@ li {
 .rightside {
   height: 50vh;
   width: 100%;
+  overflow: auto;
 }
 
 .leftside {
@@ -200,14 +201,21 @@ li {
   float: left;
   padding: 30px;
   left: 0;
-  overflow: scroll;
+  /* overflow: auto; */
+
+  /* position: relative;
+  overflow-y: scroll; */
+  /* margin: 10px; */
 }
 .rightside {
   background-color: rgb(212, 226, 234);
   float: right;
   padding: 30px;
   right: 0;
-  overflow: scroll;
+  /* overflow: auto; */
+
+  /* overflow: scroll;
+  margin: 10px; */
 }
 
 @media screen and (min-width: 768px) {
@@ -235,7 +243,7 @@ li {
 .fa-star-o:before {
   content: "\f006";
   color: #5f6368;
-  font-size: 40px;
+  font-size: 60px;
 }
 
 .fa-star:hover {
@@ -245,7 +253,7 @@ li {
 .fa-star:before {
   content: "\f005";
   color: #d56e0c;
-  font-size: 40px;
+  font-size: 60px;
 }
 
 .rating {
@@ -254,6 +262,37 @@ li {
   justify-content: center;
   align-items: center;
   margin-top: 20px;
+}
+
+/* RATING EMOJIS */
+.fa-ban {
+  content: "\f05e";
+  color: #e10404;
+  font-size: 100px;
+}
+
+.fa-frown-o {
+  content: "\f119";
+  color: #a81e0c;
+  font-size: 100px;
+}
+
+.fa-meh-o {
+  content: "\f11a";
+  color: #0d19f7;
+  font-size: 100px;
+}
+
+.fa-smile-o {
+  content: "\f118";
+  color: #025007cd;
+  font-size: 100px;
+}
+
+.fa-fire {
+  content: "\f06d";
+  color: #f90202fd;
+  font-size: 100px;
 }
 
 /* COMMENT SECTION  */
@@ -304,6 +343,6 @@ input[type="submit"]:hover {
 /* p {
   font-family: "Nunito Sans", sans-serif;
 } */
-.navbar .container-fluid {
-  justify-content: center;
+.text-center {
+  background-color: rgba(0, 0, 0, 0.2);
 }
