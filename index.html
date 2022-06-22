@@ -9,14 +9,153 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.11.8/semantic.min.css"
     />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Monoton&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Monoton&family=Raleway+Dots&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant:wght@600&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="assets/style.css" />
     <!-- <link rel="icon" href="./favicon.ico" type="image/x-icon" /> -->
   </head>
   <body>
-    <main>
-      <h1><div class="heading-one">Chuck Norris was here!</div></h1>
-      <p class="value"></p>
-    </main>
+    <!-- TOP NAVBAR -->
+    <nav class="navbar">
+      <!-- logo -->
+      <div class="logo">
+        <a href="#"><img src="./assets/chuck-icon.png" /></a>
+      </div>
+      <h2 class="">
+        <div class="content">IT'S CHUCK NORRIS' UNIVERSE</div>
+        <div class="subheader" id="subtitle">
+          ...and we're all just living in it.
+        </div>
+      </h2>
+      <!-- navigation menu -->
+      <ul class="nav-links">
+        <!-- checkbox hack -->
+        <input type="checkbox" id="checkbox_toggle" />
+        <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+        <!-- navigation menus -->
+        <div class="menu">
+          <li><a href="#">HOME</a></li>
+          <li class="services">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdownMenuLink"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              SERVICES</a
+            >
+            <!-- dropdown menu -->
+            <ul class="dropdown">
+              <li><a href="#">DROPDOWN 1</a></li>
+              <li><a href="#">DROPDOWN 1</a></li>
+              <li><a href="#">DROPDOWN 1</a></li>
+              <li><a href="#">DROPDOWN 1</a></li>
+              <li><a href="#">DROPDOWN 1</a></li>
+              <li><a href="#">DROPDOWN 1</a></li>
+              <li><a href="#">DROPDOWN 1</a></li>
+              <li><a href="#">DROPDOWN 1</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" class="btn btn-outline-primary my-2 my-sm-0">CONTACT</a>
+          </li>
+        </div>
+      </ul>
+    </nav>
+
+    <div class="row g-0">
+      <div class="col md-6 g-0">
+        <div class="leftside d-flex justify-content-center align-items-justify">
+          <!-- LEFT SIDE -->
+          <div>
+            <!-- joke content display -->
+            <div>
+              <h2 class="joke-content"></h2>
+            </div>
+            <div class="reload-content">
+              <button id="reload-joke" class="ui orange button">
+                RANDOMIZE
+              </button>
+            </div>
+
+            <!-- query joke -->
+            <div>
+              <div class="container-fluid">
+                <form class="d-flex" role="search">
+                  <input
+                    class="form-control me-2"
+                    type="search"
+                    placeholder="Enter query to search joke"
+                    aria-label="Search"
+                  />
+                  <button class="btn btn-outline-success" type="submit">
+                    RETRIEVE JOKE
+                  </button>
+                </form>
+              </div>
+            </div>
+
+            <div>
+              <!-- add rating section -->
+            </div>
+
+            <div>
+              <!-- add comment section -->
+            </div>
+            <div>
+              <!-- add personalized joke -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col md-6 g-0">
+        <div
+          class="rightside d-flex justify-content-center align-items-justify"
+        >
+          <!-- RIGHT SIDE -->
+          <div>
+            <div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- BOTTOM NAVBAR -->
+    <div>
+      <nav class="navbar fixed-bottom bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"
+            >Bottom content. Copyright and API Source. Licences.</a
+          >
+        </div>
+      </nav>
+    </div>
+
     <script src="src/index.js"></script>
   </body>
 </html>
