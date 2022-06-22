@@ -1,5 +1,132 @@
+/* NAVBAR STYLING */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: teal;
+  color: #fff;
+}
+.nav-links a {
+  color: #fff;
+}
+
+/* LOGO */
+.logo {
+  font-size: 32px;
+}
+
+/* NAVBAR MENU */
+.menu {
+  display: flex;
+  gap: 1em;
+  font-size: 18px;
+}
+
+.menu li:hover {
+  background-color: #4c9e9e;
+  border-radius: 5px;
+  transition: 0.3s ease;
+}
+
+.menu li {
+  padding: 5px 14px;
+}
+
+/* DROPDOWN MENU */
+.services {
+  position: relative;
+}
+
+.dropdown {
+  background-color: rgb(1, 139, 139);
+  padding: 1em 0;
+  position: absolute; /*WITH RESPECT TO PARENT */
+  display: none;
+  border-radius: 8px;
+  top: 35px;
+}
+.dropdown li + li {
+  margin-top: 10px;
+}
+
+.dropdown li {
+  padding: 0.5em 1em;
+  width: 8em;
+  text-align: center;
+}
+
+.dropdown li:hover {
+  background-color: #4c9e9e;
+}
+.services:hover .dropdown {
+  display: block;
+}
+/* CHECKBOX HACK  */
+input[type="checkbox"] {
+  display: none;
+}
+
+/* HAMBURGER MENU */
+.hamburger {
+  display: none;
+  font-size: 24px;
+  user-select: none;
+}
+
+.joke-content {
+  font-family: "Nunito", sans-serif;
+}
+
+.reload-content {
+  text-align: center;
+  margin: 2em;
+}
+
+/* APPLY MEDIA QUERIES */
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+    position: absolute;
+    background-color: teal;
+    right: 0;
+    left: 0;
+    text-align: center;
+    padding: 16px 0;
+  }
+
+  .menu li:hover {
+    display: inline-block;
+    background-color: #4c9e9e;
+    transition: 00.3s ease;
+  }
+
+  .menu li + li {
+    margin-top: 12px;
+  }
+
+  input[type="checkbox"]:checked ~ .menu {
+    display: block;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .dropdown {
+    left: 50px;
+    top: 30px;
+    transform: translateX(35%);
+  }
+
+  .dropdown li:hover {
+    background-color: #4c9e9e;
+  }
+}
+
 body {
   background-color: #ebebeb;
+  font-family: "Cormorant", serif;
 }
 
 .heading {
@@ -12,4 +139,77 @@ body {
   background-color: #333333;
   padding: 5px;
   color: white;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+.content {
+  font-family: "Monoton", cursive;
+  font-size: 44px;
+}
+.subheader {
+  font-family: "Raleway Dots", cursive;
+}
+
+/* experimental */
+/* .left {
+  width: 50%;
+  height: 100%;
+  float: left;
+  padding: 30px;
+  left: 0;
+  background-color: rgb(194, 220, 223);
+}
+.right {
+  width: 50%;
+  height: 100%;
+  float: right;
+  padding: 30px;
+  right: 0;
+  background-color: rgb(202, 182, 197);
+}
+.clear-fix {
+  clear: both;
+} */
+
+/* If you want the content centered horizontally and vertically */
+/* .centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+} */
+.leftside,
+.rightside {
+  height: 50vh;
+  width: 100%;
+}
+
+.leftside {
+  background-color: rgb(194, 220, 223);
+  float: left;
+  padding: 30px;
+  left: 0;
+}
+.rightside {
+  background-color: rgb(202, 182, 197);
+  float: right;
+  padding: 30px;
+  right: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .leftside,
+  .rightside {
+    height: 100vh;
+  }
 }
