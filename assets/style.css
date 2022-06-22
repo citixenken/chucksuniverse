@@ -20,7 +20,7 @@
 .menu {
   display: flex;
   gap: 1em;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .menu li:hover {
@@ -127,7 +127,7 @@ input[type="checkbox"] {
 body {
   background-color: #ebebeb;
   font-family: "Nunito Sans", sans-serif;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .heading {
@@ -200,12 +200,14 @@ li {
   float: left;
   padding: 30px;
   left: 0;
+  overflow: scroll;
 }
 .rightside {
   background-color: rgb(212, 226, 234);
   float: right;
   padding: 30px;
   right: 0;
+  overflow: scroll;
 }
 
 @media screen and (min-width: 768px) {
@@ -299,6 +301,9 @@ input[type="submit"]:hover {
   align-items: center;
   justify-content: center; */
 }
-p {
+/* p {
   font-family: "Nunito Sans", sans-serif;
+} */
+.navbar .container-fluid {
+  justify-content: center;
 }
