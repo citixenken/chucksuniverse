@@ -141,7 +141,7 @@
             <!-- add comment section -->
             <div class="comment-container">
               <form action="" method="POST">
-                <label for="name">Name</label>
+                <label for="name"></label>
                 <input
                   type="text"
                   name="name"
@@ -157,9 +157,6 @@
                 <input type="submit" name="submit" value="Add Comment" />
               </form>
             </div>
-
-            <!-- add personalized joke -->
-            <div></div>
           </div>
         </div>
       </div>
@@ -169,7 +166,35 @@
         >
           <!-- RIGHT SIDE -->
           <div>
-            <div></div>
+            <!-- display user comments here  -->
+            <div>
+              Display user comments here...
+              <h3>Comment:</h3>
+              <p id="comment-display">Insert comment here</p>
+            </div>
+            <br />
+            <br />
+            <br />
+            <br />
+            <!-- add personalized joke -->
+            <div class="personalised-container">
+              <form action="" method="POST">
+                <p>Feel like you can square it off with Chuck?</p>
+                <label for="comment"></label>
+                <textarea
+                  class="comment"
+                  placeholder="Type your joke here and display it"
+                ></textarea>
+                <input
+                  type="submit"
+                  name="submit"
+                  value="ADD PERSONALIZED JOKE"
+                />
+              </form>
+              <!-- <button id="personalised-joke" class="ui orange button">
+                ADD PERSONALIZED JOKE
+              </button> -->
+            </div>
           </div>
         </div>
       </div>
