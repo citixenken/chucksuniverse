@@ -30,8 +30,12 @@
       rel="stylesheet"
     />
     <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant:wght@600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap"
       rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css"
     />
 
     <link rel="stylesheet" href="assets/style.css" />
@@ -89,7 +93,7 @@
     </nav>
 
     <div class="row g-0">
-      <div class="col md-6 g-0">
+      <div class="col-md-8 g-0">
         <div class="leftside d-flex justify-content-center align-items-justify">
           <!-- LEFT SIDE -->
           <div>
@@ -110,7 +114,7 @@
                   <input
                     class="form-control me-2"
                     type="search"
-                    placeholder="Enter query to search joke"
+                    placeholder="Type something to see what Chuck thinks about it..."
                     aria-label="Search"
                   />
                   <button class="btn btn-outline-success" type="submit">
@@ -120,20 +124,28 @@
               </div>
             </div>
 
-            <div>
-              <!-- add rating section -->
+            <!-- add rating section -->
+
+            <div class="rating-container">
+              <p>Rate Joke</p>
+              <div class="input-container">
+                <i class="fa fa-star-o"></i>
+                <i class="fa fa-star-o"></i>
+                <i class="fa fa-star-o"></i>
+                <i class="fa fa-star-o"></i>
+                <i class="fa fa-star-o"></i>
+              </div>
+              <p class="rating">0</p>
             </div>
 
-            <div>
-              <!-- add comment section -->
-            </div>
-            <div>
-              <!-- add personalized joke -->
-            </div>
+            <!-- add comment section -->
+            <div></div>
+            <!-- add personalized joke -->
+            <div></div>
           </div>
         </div>
       </div>
-      <div class="col md-6 g-0">
+      <div class="col-md-4 g-0">
         <div
           class="rightside d-flex justify-content-center align-items-justify"
         >
