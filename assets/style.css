@@ -129,7 +129,8 @@ input[type="checkbox"] {
 
 body {
   background-color: #ebebeb;
-  font-family: "Nunito Sans", sans-serif;
+  /* font-family: "Nunito Sans", sans-serif; */
+  font-family: "Overpass", sans-serif;
   font-size: 14px;
 }
 
@@ -155,7 +156,7 @@ a {
 li {
   list-style: none;
 }
-.content {
+.header {
   font-family: "Monoton", cursive;
   font-size: 50px;
 }
@@ -343,7 +344,8 @@ input[type="submit"]:hover {
   border-radius: 5px;
   background-color: #f2f2f2;
   padding: 5px;
-  font-family: "Nunito Sans", sans-serif;
+  /* font-family: "Nunito Sans", sans-serif; */
+  font-family: "Overpass", sans-serif;
   width: 75%;
   margin: auto;
   /* 
@@ -362,7 +364,9 @@ input[type="submit"]:hover {
   border-radius: 5px;
   background-color: #f2f2f2;
   padding: 5px;
-  font-family: "Nunito Sans", sans-serif;
+  /* font-family: "Nunito Sans", sans-serif; */
+  font-family: "Overpass", sans-serif;
+
   width: 100%;
   margin-top: 200px;
 }
