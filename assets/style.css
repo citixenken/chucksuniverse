@@ -161,8 +161,27 @@ li {
   font-size: 50px;
 }
 .subheader {
-  font-family: "Raleway Dots", cursive;
+  font-family: "Yellowtail", cursive;
+  background-color: #ec6709;
+  font-size: 48px;
 }
+
+.comment_styling {
+  border: 2px solid #ec6709;
+  background-color: #4c9e9e;
+  /* float: left; */
+  border-radius: 5px;
+  padding: 10px;
+}
+h4,
+p {
+  font-family: "Special Elite", cursive;
+}
+
+/* font-family: "Monoton", cursive; */
+/* padding-left: 40px; */
+/* padding-right: 30px; */
+/* padding-top: 10px; */
 
 /* experimental */
 /* .left {

@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // e.preventDefault();
   // queryTerm();
   addPersonalizedJoke();
-  // addComment();
+  addComment();
   getRandomJoke();
   getRandomJokeSpecifyCategory();
   showCategories();
@@ -148,23 +148,17 @@ function onClick(e) {
 //=========================
 
 function addComment() {
-  let userNameDisplay = document.querySelector(".name-says");
+  let submitComment = document.querySelector("#add-comment-form");
 
-  let userCommentDisplay = document.querySelector("#comment-display");
+  let newUserDisplay = document.querySelector(".name_says");
 
-  let addCommentButton = document.querySelector(".add-comment");
-  addCommentButton.addEventListener("submit", (e) => {
+  let newCommentDisplay = document.querySelector("#comment-display");
+  submitComment.addEventListener("submit", (e) => {
     e.preventDefault();
+    newUserDisplay.innerText = e.target.name.value;
+    newCommentDisplay.innerText = e.target.comment_area.value;
 
-    let userNameCreateDisplay = document.createElement("h4");
-    let userName = document.querySelector("#name").value;
-    userNameDisplay.innerText = userName;
-    userNameCreateDisplay.append(userNameDisplay);
-
-    let userCommentCreateDisplay = document.createElement("p");
-    let userComment = document.querySelector(".comment").value;
-    userCommentDisplay.innerText = userComment;
-    userCommentCreateDisplay.append(userCommentDisplay);
+    submitComment.reset();
   });
 }
 
@@ -177,7 +171,7 @@ function addPersonalizedJoke() {
   let newJoke = document.querySelector(".joke-content");
   submitPersonalisedJoke.addEventListener("submit", (e) => {
     e.preventDefault();
-    newJoke.innerText = e.target.personalized_comment.value;
+    newJoke.innerText = e.target.personalized_joke.value;
     // console.log(e.target.personalized_comment.value);
 
     submitPersonalisedJoke.reset();

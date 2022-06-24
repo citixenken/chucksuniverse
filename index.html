@@ -21,10 +21,7 @@
       href="https://fonts.googleapis.com/css2?family=Monoton&display=swap"
       rel="stylesheet"
     />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Monoton&family=Raleway+Dots&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet" />
     <link
       href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,500&display=swap"
       rel="stylesheet"
@@ -33,6 +30,7 @@
       href="https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap"
       rel="stylesheet"
     />
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet" />
     <link
       rel="stylesheet"
       href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css"
@@ -165,11 +163,12 @@
                 />
                 <label for="comment"></label>
                 <textarea
+                id="comment_area"
                   class="comment"
                   placeholder="What do you think of the joke?"
                 ></textarea>
                 <br />
-                <input type="submit" name="submit" value="ADD COMMENT" />
+                <input id="submit" type="submit" name="submit" value="ADD COMMENT" />
                 <!-- <button class="add-comment btn btn-outline-success" type="submit"> 
                   ADD COMMENT
                 </button> -->
@@ -183,13 +182,13 @@
           <!-- RIGHT SIDE -->
           <div>
             <!-- display user comments here  -->
-            <div>
-              <h3>User comments:</h3>
-              <!-- <h4><span class="name-says"></span> says: </p>
-              <p id="comment-display">Insert comment here</p> -->
-              <ul class="unordered_comments">
+            <div class= "comment_styling mt-4 text-justify">
+              <h3>USER COMMENT:</h3>
+              <h4><span class="name_says"></span> says: </p> 
+              <p id="comment-display">Insert comment here</p> 
+              <!-- <ul class="unordered_comments">
                 <li></li>
-              </ul>
+              </ul> -->
             </div>
             <!-- add personalized joke -->
             <div class="personalised-container">
@@ -197,8 +196,8 @@
                 <legend>Feel like you can square it off with Chuck?</legend>
                 <label for="comment"></label>
                 <textarea
-                  id="personalized_comment"
-                  placeholder="Type your joke here and display it"
+                  id="personalized_joke"
+                  placeholder="Type your joke here to display it"
                 ></textarea>
                 <input
                   id="submit"
