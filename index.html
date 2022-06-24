@@ -118,14 +118,19 @@
             <!-- query joke -->
             <div>
               <div class="container-fluid">
-                <form class="d-flex" role="search">
+                <!-- <form id = "query-joke" class="d-flex" role="search"> -->
+                <form id="query-joke" class="d-flex">
                   <input
+                    id="textsearch"
                     class="form-control me-2"
                     type="search"
                     placeholder="Type something to see what Chuck thinks about it..."
                     aria-label="Search"
                   />
-                  <button class="btn btn-outline-success" type="submit">
+                  <button
+                    class="retrieve-joke btn btn-outline-success"
+                    type="submit"
+                  >
                     RETRIEVE JOKE
                   </button>
                 </form>
@@ -148,7 +153,8 @@
 
             <!-- add comment section -->
             <div class="comment-container">
-              <form action="" method="POST">
+              <!-- <form action="" method="POST"> -->
+              <form id="add-comment-form">
                 <legend>Add a comment</legend>
                 <label for="name"></label>
                 <input
@@ -164,6 +170,9 @@
                 ></textarea>
                 <br />
                 <input type="submit" name="submit" value="ADD COMMENT" />
+                <!-- <button class="add-comment btn btn-outline-success" type="submit"> 
+                  ADD COMMENT
+                </button> -->
               </form>
             </div>
           </div>
@@ -176,26 +185,28 @@
             <!-- display user comments here  -->
             <div>
               <h3>User comments:</h3>
-              <p id="comment-display">Insert comment here</p>
+              <!-- <h4><span class="name-says"></span> says: </p>
+              <p id="comment-display">Insert comment here</p> -->
+              <ul class="unordered_comments">
+                <li></li>
+              </ul>
             </div>
             <!-- add personalized joke -->
             <div class="personalised-container">
-              <form action="" method="POST">
+              <form id="add-personal-joke">
                 <legend>Feel like you can square it off with Chuck?</legend>
                 <label for="comment"></label>
                 <textarea
-                  class="comment"
+                  id="personalized_comment"
                   placeholder="Type your joke here and display it"
                 ></textarea>
                 <input
+                  id="submit"
                   type="submit"
                   name="submit"
                   value="ADD PERSONALIZED JOKE"
                 />
               </form>
-              <!-- <button id="personalised-joke" class="ui orange button">
-                ADD PERSONALIZED JOKE
-              </button> -->
             </div>
           </div>
         </div>
