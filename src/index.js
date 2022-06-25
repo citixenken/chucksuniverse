@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // e.preventDefault();
-  queryTerm();
+  e.preventDefault();
   searchJokes();
   addPersonalizedJoke();
   addComment();
@@ -23,53 +22,61 @@ const jokesCategories = "categories";
 let category = "dev";
 const jokesRandomSpecifyCategory = `random?category=${category}`;
 
-let query = "";
-function queryTerm() {
-  let queryField = document.querySelector("#query-joke");
-  queryField.addEventListener("submit", (e) => {
-    e.preventDefault();
-    if (e.target.textsearch.value !== "") {
-      query = e.target.textsearch.value;
-      return query;
-    } else {
-      return (query = "mouth");
-    }
+//SET-UP SEARCH JOKE
+//==================
+let queryJoke = document.querySelector("#query-joke");
+let query;
+let queryJokes;
+query = queryJoke.addEventListener("submit", (e) => {
+  e.preventDefault();
+  if (e.target.textsearch.value === "") {
+    query = "computer";
+    queryJokes = `search?query=${query}`;
+  } else {
+    query = e.target.textsearch.value;
+    queryJokes = `search?query=${query}`;
+  }
 
-    // console.log(query);
-  });
-  // queryField.reset();
+  searchJokes();
+});
+
+//SEARCH JOKES
+//================
+function searchJokes() {
+  fetch(BASE_URL + `${queryJokes}`)
+    .then(parseResponse)
+    .then((searchJokesByKeyword) => {
+      let jokeContent = document.querySelector(".joke-content");
+      jokeContent.innerText = searchJokesByKeyword.result[0].value;
+    })
+    .catch(handleError);
 }
 
-query = queryTerm();
-console.log(query);
-
-let queryJokes = `search?query=${query}`;
-
-//1. GET RANDOM JOKE
+//GET RANDOM JOKE
 //==================
 function getRandomJoke() {
   fetch(BASE_URL + `${jokesRandom}`)
     .then(parseResponse)
     .then((randomJoke) => {
-      // console.log(randomJoke);
       let jokeContent = document.querySelector(".joke-content");
       jokeContent.innerText = randomJoke.value;
     })
     .catch(handleError);
 }
 
-//2. GET RANDOM JOKE BY CATEGORY
+//GET RANDOM JOKE BY CATEGORY
 //==============================
 function getRandomJokeSpecifyCategory() {
   fetch(BASE_URL + `${jokesRandomSpecifyCategory}`)
     .then(parseResponse)
     .then((randomJokeSpecifyCategory) => {
-      //   console.log(randomJokeSpecifyCategory);
+      let jokeContent = document.querySelector(".joke-content");
+      jokeContent.innerText = randomJokeSpecifyCategory.value;
     })
     .catch(handleError);
 }
 
-//3. DISPLAY CATEGORIES
+//DISPLAY CATEGORIES
 //======================
 function showCategories() {
   fetch(BASE_URL + `${jokesCategories}`)
@@ -78,31 +85,22 @@ function showCategories() {
       jokeCategories.forEach((jokeCategory) => {
         const categoryList = document.getElementById("categories");
         let eachCategory = document.createElement("li");
+        eachCategory.className = "category";
         eachCategory.innerText = jokeCategory.toUpperCase();
 
         categoryList.append(eachCategory);
 
-        // eachCategory.addEventListener("click", () => {
-        //   firstMovieInfo(movie);
-        // });
+        eachCategory.addEventListener("click", () => {
+          getRandomJokeSpecifyCategory();
+        });
       });
     })
 
     .catch(handleError);
 }
 
-//4. SEARCH JOKES
-//================
-function searchJokes() {
-  fetch(BASE_URL + `${queryJokes}`)
-    .then(parseResponse)
-    .then((searchJokesByKeyword) => {
-      // console.log(searchJokesByKeyword);
-    })
-    .catch(handleError);
-}
-
 // RANDOMIZE BUTTON FUNCTIONALITY
+//===============================
 const randomize = document.getElementById("reload-joke");
 randomize.addEventListener("click", (e) => {
   e.preventDefault();
@@ -110,6 +108,7 @@ randomize.addEventListener("click", (e) => {
 });
 
 // RATING IMPLEMENTATION
+//=======================
 let ratingDisplay = document.querySelector(".rating");
 let stars = document.querySelectorAll(".fa-star-o");
 let totalStar = 0;
@@ -186,7 +185,6 @@ function addPersonalizedJoke() {
   submitPersonalisedJoke.addEventListener("submit", (e) => {
     e.preventDefault();
     newJoke.innerText = e.target.personalized_joke.value;
-    // console.log(e.target.personalized_comment.value);
 
     submitPersonalisedJoke.reset();
   });
