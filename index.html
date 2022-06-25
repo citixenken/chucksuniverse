@@ -76,15 +76,7 @@
               CATEGORIES</a
             >
             <!-- dropdown menu -->
-            <ul class="dropdown">
-              <li><a href="#">DROPDOWN 1</a></li>
-              <li><a href="#">DROPDOWN 1</a></li>
-              <li><a href="#">DROPDOWN 1</a></li>
-              <li><a href="#">DROPDOWN 1</a></li>
-              <li><a href="#">DROPDOWN 1</a></li>
-              <li><a href="#">DROPDOWN 1</a></li>
-              <li><a href="#">DROPDOWN 1</a></li>
-              <li><a href="#">DROPDOWN 1</a></li>
+            <ul id="categories" class="dropdown">
             </ul>
           </li>
           <li>
@@ -121,16 +113,17 @@
                   <input
                     id="textsearch"
                     class="form-control me-2"
-                    type="search"
+                    type="text"
                     placeholder="Type something to see what Chuck thinks about it..."
                     aria-label="Search"
                   />
-                  <button
-                    class="retrieve-joke btn btn-outline-success"
+                  <!-- <button
+                    id="retrieve_joke" class="retrieve-joke btn btn-outline-success"
                     type="submit"
                   >
                     RETRIEVE JOKE
-                  </button>
+                  </button> -->
+                  <input id="submit" type="submit" name="submit" value="RETRIEVE JOKE" />
                 </form>
               </div>
             </div>

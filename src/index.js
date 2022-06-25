@@ -1,12 +1,12 @@
 document.addEventListener("DOMContentLoaded", () => {
   // e.preventDefault();
-  // queryTerm();
+  queryTerm();
+  searchJokes();
   addPersonalizedJoke();
   addComment();
   getRandomJoke();
   getRandomJokeSpecifyCategory();
   showCategories();
-  searchJokes();
 });
 
 function parseResponse(response) {
@@ -23,17 +23,26 @@ const jokesCategories = "categories";
 let category = "dev";
 const jokesRandomSpecifyCategory = `random?category=${category}`;
 
-let queryField = document.querySelector(".search");
+let query = "";
+function queryTerm() {
+  let queryField = document.querySelector("#query-joke");
+  queryField.addEventListener("submit", (e) => {
+    e.preventDefault();
+    if (e.target.textsearch.value !== "") {
+      query = e.target.textsearch.value;
+      return query;
+    } else {
+      return (query = "mouth");
+    }
 
-let query = "computer";
+    // console.log(query);
+  });
+  // queryField.reset();
+}
 
-// let queryTerm = () => {
-//   // let queryField = document.querySelector("#textsearch").value;
-//   return queryField == "laptop";
-// };
+query = queryTerm();
+console.log(query);
 
-// let query = queryTerm();
-// console.log(query);
 let queryJokes = `search?query=${query}`;
 
 //1. GET RANDOM JOKE
@@ -66,8 +75,19 @@ function showCategories() {
   fetch(BASE_URL + `${jokesCategories}`)
     .then(parseResponse)
     .then((jokeCategories) => {
-      //   console.log(jokeCategories);
+      jokeCategories.forEach((jokeCategory) => {
+        const categoryList = document.getElementById("categories");
+        let eachCategory = document.createElement("li");
+        eachCategory.innerText = jokeCategory.toUpperCase();
+
+        categoryList.append(eachCategory);
+
+        // eachCategory.addEventListener("click", () => {
+        //   firstMovieInfo(movie);
+        // });
+      });
     })
+
     .catch(handleError);
 }
 
@@ -76,14 +96,8 @@ function showCategories() {
 function searchJokes() {
   fetch(BASE_URL + `${queryJokes}`)
     .then(parseResponse)
-    .then((searchJokes) => {
-      let retrieveJokeButton = document.querySelector(".retrieve-joke");
-      retrieveJokeButton.addEventListener("submit", (e) => {
-        e.preventDefault;
-        let jokeContent = document.querySelector(".joke-content");
-        let retrievedAnswer = searchJokes.result[0].value;
-        jokeContent.innerText = retrievedAnswer;
-      });
+    .then((searchJokesByKeyword) => {
+      // console.log(searchJokesByKeyword);
     })
     .catch(handleError);
 }
