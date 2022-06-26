@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", (e) => {
   e.preventDefault();
   searchJokes();
   addPersonalizedJoke();
@@ -22,11 +22,30 @@ const jokesCategories = "categories";
 let category = "dev";
 const jokesRandomSpecifyCategory = `random?category=${category}`;
 
+//SELECT JOKE BY CATEGORY
+//=======================
+// let queryJokeByCategory = document.querySelector("li");
+// let category;
+// let jokesRandomSpecifyCategory;
+
+// category = queryJokeByCategory.addEventListener("click", (e) => {
+//   e.preventDefault();
+//   if (e.target.categories.value === "") {
+//     category = "dev";
+//     jokesRandomSpecifyCategory = `random?category=${category}`;
+//   } else {
+//     query = e.target.categories.value;
+//     jokesRandomSpecifyCategory = `random?category=${category}`;
+//   }
+//   getRandomJokeSpecifyCategory();
+// });
+
 //SET-UP SEARCH JOKE
 //==================
 let queryJoke = document.querySelector("#query-joke");
 let query;
 let queryJokes;
+
 query = queryJoke.addEventListener("submit", (e) => {
   e.preventDefault();
   if (e.target.textsearch.value === "") {
