@@ -70,34 +70,23 @@
   </ul>
   
 
-<h3> Demo -> Show me what you got </h3>
+<h3> Demo </h3>
 
-<a href="#"> Link to your awesome Demo </a>
+![Chuck_Universe_Demo_Gif](assets/chucksuniverse.gif)
 
-<a href="#"> Another Link to your awesome Demo </a>
 
-<a href="https://www.designinspiration.info/"> Design Fonts Inspiration </a>
+<h3>Run Locally</h3>
 
-<h3> Code Demo </h3>
+
+
+<p>Clone this repo; and in your favourite code editor, change directory to main folder and run </p>
 
 ```html
 
-We will use markdown for the Syntax Highlighting
-
-<ul>
-  <li>Beautiful Starter Template for README.md</li>
-  <li>Key feature num. 2</li>
-  <li>Key feature num. 3</li>
-  <li>Key feature num. 4</li>
-</ul>
+open index.html
 
 ```
 
-<h3> Setup and Installation </h3>
-
-```shell
-$ npm i boilerplate-readme-template
-```
 <h3>Contributing</h3>
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
