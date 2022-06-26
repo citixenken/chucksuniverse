@@ -74,7 +74,7 @@
 
 ![Chuck_Universe_Demo_Gif](assets/chucksuniverse.gif)
 
-
+<p>Try it out <a href="https://citixenken.github.io/chucksuniverse/">here</a></p>
 <h3>Run Locally</h3>
 
 
