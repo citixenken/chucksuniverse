@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", (e) => {
-  e.preventDefault();
   searchJokes();
   addPersonalizedJoke();
   addComment();

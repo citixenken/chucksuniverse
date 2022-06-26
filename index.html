@@ -42,7 +42,6 @@
     />
 
     <link rel="stylesheet" href="assets/style.css" />
-    <!-- <link rel="icon" href="./favicon.ico" type="image/x-icon" /> -->
   </head>
   <body>
     <!-- TOP NAVBAR -->
@@ -109,7 +108,6 @@
             <!-- query joke -->
             <div>
               <div class="container-fluid">
-                <!-- <form id = "query-joke" class="d-flex" role="search"> -->
                 <form id="query-joke" class="d-flex">
                   <input
                     id="textsearch"
@@ -118,12 +116,6 @@
                     placeholder="Type something to see what Chuck thinks about it..."
                     aria-label="Search"
                   />
-                  <!-- <button
-                    id="retrieve_joke" class="retrieve-joke btn btn-outline-success"
-                    type="submit"
-                  >
-                    RETRIEVE JOKE
-                  </button> -->
                   <input id="submit" type="submit" name="submit" value="RETRIEVE JOKE" />
                 </form>
               </div>
@@ -163,9 +155,6 @@
                 ></textarea>
                 <br />
                 <input id="submit" type="submit" name="submit" value="ADD COMMENT" />
-                <!-- <button class="add-comment btn btn-outline-success" type="submit"> 
-                  ADD COMMENT
-                </button> -->
               </form>
             </div>
           </div>
@@ -178,11 +167,8 @@
             <!-- display user comments here  -->
             <div class= "comment_styling mt-4 text-justify">
               <h3>USER COMMENT:</h3>
-              <h4><span class="name_says"></span> says: </p> 
+              <h4><span class="name_says">User</span> says: </p> 
               <p id="comment-display">Insert comment here</p> 
-              <!-- <ul class="unordered_comments">
-                <li></li>
-              </ul> -->
             </div>
             <!-- add personalized joke -->
             <div class="personalised-container">
@@ -216,10 +202,6 @@
       </div>
       <!-- Copyright -->
     </footer>
-    <!-- <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/fontawesome.min.css"
-    /> -->
     <script src="src/index.js"></script>
   </body>
 </html>

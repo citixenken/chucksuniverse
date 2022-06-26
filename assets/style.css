@@ -74,13 +74,15 @@ input[type="checkbox"] {
   user-select: none;
 }
 
+/* JOKE DISPLAY */
 .joke-content {
   font-family: "Nunito", sans-serif;
   text-align: center;
-  font-size: 48px;
+  font-size: 36px;
   color: #ec6709;
 }
 
+/* RANDOMIZE BUTTON */
 .reload-content {
   text-align: center;
   margin: 2em;
@@ -127,6 +129,7 @@ input[type="checkbox"] {
   }
 }
 
+/* BODY STYLING */
 body {
   background-color: #ebebeb;
   /* font-family: "Nunito Sans", sans-serif; */
@@ -134,17 +137,6 @@ body {
   font-size: 14px;
 }
 
-.heading {
-  background-color: #333333;
-  margin-bottom: 20px;
-  padding: 5px 0px 5px 15px;
-}
-
-.title {
-  background-color: #333333;
-  padding: 5px;
-  color: white;
-}
 * {
   margin: 0;
   padding: 0;
@@ -173,50 +165,16 @@ li {
   border-radius: 5px;
   padding: 10px;
 }
+
 h4,
 p {
   font-family: "Special Elite", cursive;
 }
 
-/* font-family: "Monoton", cursive; */
-/* padding-left: 40px; */
-/* padding-right: 30px; */
-/* padding-top: 10px; */
-
-/* experimental */
-/* .left {
-  width: 50%;
-  height: 100%;
-  float: left;
-  padding: 30px;
-  left: 0;
-  background-color: rgb(194, 220, 223);
-}
-.right {
-  width: 50%;
-  height: 100%;
-  float: right;
-  padding: 30px;
-  right: 0;
-  background-color: rgb(202, 182, 197);
-}
-.clear-fix {
-  clear: both;
-} */
-
-/* If you want the content centered horizontally and vertically */
-/* .centered {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-} */
 .leftside,
 .rightside {
   height: 50vh;
   width: 100%;
-  /* overflow: auto; */
 }
 
 .leftside {
@@ -225,20 +183,12 @@ p {
   padding: 30px;
   left: 0;
   overflow: auto;
-
-  /* position: relative;
-  overflow-y: scroll; */
-  /* margin: 10px; */
 }
 .rightside {
   background-color: rgb(212, 226, 234);
   float: right;
   padding: 30px;
   right: 0;
-  /* overflow: auto; */
-
-  /* overflow: scroll;
-  margin: 10px; */
 }
 
 @media screen and (min-width: 768px) {
@@ -255,7 +205,6 @@ p {
 }
 
 /* RATING IMPLEMENTATION */
-
 .rating-container {
   text-align: center;
   margin: 2em;
@@ -297,37 +246,32 @@ p {
 .fa-ban {
   content: "\f05e";
   color: #e10404;
-  font-size: 100px;
+  font-size: 80px;
 }
 
 .fa-frown-o {
   content: "\f119";
   color: #a81e0c;
-  font-size: 100px;
+  font-size: 80px;
 }
 
 .fa-meh-o {
   content: "\f11a";
   color: #0d19f7;
-  font-size: 100px;
+  font-size: 80px;
 }
 
 .fa-smile-o {
   content: "\f118";
   color: #025007cd;
-  font-size: 100px;
+  font-size: 80px;
 }
 
 .fa-fire {
   content: "\f06d";
   color: #f90202fd;
-  font-size: 100px;
+  font-size: 80px;
 }
-
-/* COMMENT SECTION  */
-/* .comment-container {
-  font-family: "Nunito Sans", sans-serif;
-} */
 
 /* Style inputs with type="text", select elements and textareas */
 input[type="text"],
@@ -363,18 +307,11 @@ input[type="submit"]:hover {
   border-radius: 5px;
   background-color: #f2f2f2;
   padding: 5px;
-  /* font-family: "Nunito Sans", sans-serif; */
   font-family: "Overpass", sans-serif;
   width: 75%;
   margin: auto;
-  /* 
-  display: flex;
-  align-items: center;
-  justify-content: center; */
 }
-/* p {
-  font-family: "Nunito Sans", sans-serif;
-} */
+
 .text-center {
   background-color: rgba(0, 0, 0, 0.2);
 }
@@ -383,9 +320,7 @@ input[type="submit"]:hover {
   border-radius: 5px;
   background-color: #f2f2f2;
   padding: 5px;
-  /* font-family: "Nunito Sans", sans-serif; */
   font-family: "Overpass", sans-serif;
-
   width: 100%;
   margin-top: 200px;
 }
